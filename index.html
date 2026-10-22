@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1351b4">
+  <meta name="description" content="Protótipo acadêmico SUSPeritos. Painel federativo de qualidade dos dados, auditoria e cooperação, com dados inteiramente fictícios.">
+  <title>Infoseg Qualidade | Painel federativo · SUSPeritos</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="govbr-core.min.css"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+  <div class="simulation-bar"><span class="simulation-dot"></span><strong>PROTÓTIPO ACADÊMICO</strong><span class="sim-divider">|</span> Todos os dados e resultados das UFs são fictícios. <button data-view="metodologia">Entenda a simulação <span aria-hidden="true">↗</span></button></div>
+  <header class="app-header">
+    <div class="header-identity"><button id="menu-toggle" class="icon-button mobile-menu" aria-label="Abrir menu" aria-expanded="false"></button><div class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i></div><div><span class="header-brand">SUSPeritos</span><span class="header-signature">PBL · Eixo 3</span></div><span class="header-separator"></span><span class="system-name">Programa Infoseg Qualidade</span></div>
+    <div class="header-tools"><a href="https://www.gov.br/conecta/catalogo/" target="_blank" rel="noopener">Conecta gov.br <span aria-hidden="true">↗</span></a><button id="contrast" class="icon-button" aria-label="Ativar alto contraste" aria-pressed="false"></button><span class="avatar" aria-label="Visão de gestão">SP</span></div>
+  </header>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Navegação principal">
+      <div class="sidebar-heading">GESTÃO FEDERATIVA</div>
+      <nav id="navigation"></nav>
+      <div class="sidebar-note"><div class="note-icon" id="sidebar-note-icon"></div><strong>IQD, selos e<br>auditabilidade.</strong><p>Entregáveis finais · CT, tempestividade e checklist.</p><div class="mini-label">CENÁRIO DE IMPLANTAÇÃO</div><div class="implementation-line"><span></span><span></span><span></span><span></span></div><p class="small">1º quadrimestre simulado</p></div>
+      <div class="sidebar-footer"><span class="mini-label">REFERÊNCIA VISUAL</span><a href="https://www.gov.br/ds/home" target="_blank" rel="noopener">Design System gov.br ↗</a><small>Interface acadêmica independente</small></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div class="breadcrumb">Início <span>›</span> Infoseg Qualidade <span>›</span> <span id="breadcrumb-current">Visão geral</span></div>
+      <div class="page-heading"><div><div id="page-eyebrow" class="eyebrow">PAINEL FEDERATIVO</div><h1 id="page-title">Qualidade dos dados de segurança pública</h1><p id="page-description">Acompanhe o desempenho dos entes, reconheça avanços e direcione o apoio técnico.</p></div><button class="br-button secondary export-button" id="export"></button></div>
+      <section class="filters" aria-label="Filtros do painel">
+        <div class="filter-period"><label for="cycle">Ciclo mensal de acompanhamento</label><select id="cycle"><option value="3">Ciclo 4 · D+120</option><option value="2">Ciclo 3 · D+90</option><option value="1">Ciclo 2 · D+60</option><option value="0">Ciclo 1 · D+30</option></select></div>
+        <div><label for="region">Região</label><select id="region"><option value="">Todas as regiões</option><option>Norte</option><option>Nordeste</option><option>Centro-Oeste</option><option>Sudeste</option><option>Sul</option></select></div>
+        <div><label for="state">Unidade da Federação</label><select id="state"><option value="">Todas as UFs</option></select></div>
+        <button id="reset" class="reset-button">Limpar filtros</button>
+        <div class="cutoff"><span class="green-dot"></span><span id="cutoff-label">Fechamento simulado<br><strong>D+120 da implantação</strong></span></div>
+      </section>
+      <div id="filter-summary" class="filter-summary"></div>
+      <div id="content"></div>
+      <footer class="main-footer"><span><strong>SUSPeritos</strong> · Caso 1 · Transformação digital e governança de dados</span><span>Dados sintéticos · Sem conexão com bases governamentais</span></footer>
+    </main>
+  </div>
+  <dialog id="uf-dialog" aria-labelledby="uf-dialog-title"><div id="uf-dialog-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.js"></script>
+</body></html>
